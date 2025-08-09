@@ -1,0 +1,126 @@
+.team {
+  padding-block: clamp(48px, 6vw, 96px);
+
+  &__intro {
+    max-width: 960px;
+  }
+
+  &__title {
+    margin: 0 0 24px;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    margin: 0 0 20px;
+    margin-bottom: 80px;
+    max-width: 47ch;
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+  }
+
+  /* 2) Slider */
+  &-card {
+    &__body {
+      @include flex-all-between;
+    }
+
+    & img {
+      margin-bottom: 18px;
+    }
+
+    &__name {
+      margin-bottom: 8px;
+    }
+
+    &__socials {
+      @include flex-all-center;
+      gap: 8px;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background: var(--neutral-color-30);
+        transition: background var(--transition);
+
+        &:hover {
+          background: var(--primary-color-60);
+        }
+
+        img {
+          display: block;
+          width: 15px;
+          height: 15px;
+          transform: translateY(8px);
+        }
+      }
+    }
+  }
+
+  &__divider {
+    position: absolute;
+    top: 30%;
+    left: 33%;
+    z-index: 5;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    color: var(--logo-color-circle);
+    background: rgb(255 255 255 / 90%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+    &-icon {
+      font-size: 36px;
+    }
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  /* 3) Bottom block */
+  &__bottom {
+    display: grid;
+    gap: clamp(20px, 4vw, 48px);
+    align-items: start;
+    grid-template-columns: 1.2fr 1fr;
+    margin-top: clamp(40px, 6vw, 80px);
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__bottom-title {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  &__bottom-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+  }
+
+  &__bottom-link {
+    display: inline-block;
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #1d1e25;
+    transition: transform var(--transition);
+
+    &:hover {
+      transform: translateX(4px);
+    }
+  }
+}

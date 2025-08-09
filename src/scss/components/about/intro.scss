@@ -1,0 +1,73 @@
+.about-intro {
+  padding: clamp(48px, 8vw, 120px) 0;
+
+  &__container {
+    display: grid;
+    gap: clamp(24px, 4vw, 48px);
+    align-items: start;
+    grid-template-columns: 1fr auto;
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    margin-bottom: 118px;
+    max-width: 959px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @media (max-width: 576px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    max-width: 738px;
+
+    &::before {
+      width: 176px;
+      transform: translateY(-83px);
+    }
+  }
+
+  &__badge {
+    position: relative;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    box-shadow: var(--shadow-main);
+    color: var(--neutral-color-100); /* работает со светлой/тёмной темой */
+    background: var(--neutral-color-10);
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  .circle-text {
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: spin 72s linear infinite;
+  }
+
+  &__badge-icon {
+    position: absolute;
+    font-size: 56px;
+    transform: rotate(-0deg);
+    transform: translateY(5px);
+  }
+}
+
+/* опционально: анимация */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

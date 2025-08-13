@@ -2,8 +2,8 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: ['main'] # срабатывает при пуше в main
-  workflow_dispatch: # вручную можно запустить из вкладки Actions
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -16,15 +16,13 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    environment: github-pages
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -33,21 +31,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
+      - name: Build
         run: npm run build
 
-      - name: Setup GitHub Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload build output
-        id: upload
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
-          name: github-pages # добавлено имя артефакта
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          artifact_name: github-pages # указано имя артефакта вручную

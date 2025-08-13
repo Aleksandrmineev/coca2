@@ -19,14 +19,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-
       - run: npm ci
       - run: npm run build
-
+      - name: (Debug) List dist
+        run: |
+          ls -la dist
+          echo "---- index.html head ----"
+          sed -n '1,80p' dist/index.html
+      - name: (SPA optional) Copy 404.html
+        run: cp dist/index.html dist/404.html || true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist

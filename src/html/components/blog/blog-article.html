@@ -1,0 +1,145 @@
+<section class="blog-article">
+  <div class="container blog-article__container">
+    <div class="blog-article__top">
+      <div class="blog-article__header">
+        <h2 class="blog-article__title heading-h2">Articles</h2>
+        <p class="blog-article__description text-p-medium">
+          Complex tech decoded by engineers, business trends analyzed by
+          experts.
+        </p>
+      </div>
+
+      <!-- Стрелки справа от заголовка -->
+      <div class="blog-article__pagination">
+        <div
+          class="blog-article__arrow blog-article__arrow--prev"
+          aria-label="Previous article"
+        >
+          <svg
+            width="16"
+            height="13"
+            viewBox="0 0 16 13"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7.73635 12.5364C7.38487 12.8879 6.81503 12.8879 6.46355 12.5364L1.06355 7.13638C0.712082 6.78491 0.712082 6.21506 1.06355 5.86359L6.46356 0.463591C6.81503 0.112118 7.38488 0.112118 7.73635 0.463591C8.08782 0.815062 8.08782 1.38491 7.73635 1.73638L3.87274 5.59999L14.3 5.59999C14.797 5.59999 15.2 6.00293 15.2 6.49999C15.2 6.99704 14.797 7.39999 14.3 7.39999L3.87274 7.39999L7.73635 11.2636C8.08782 11.6151 8.08782 12.1849 7.73635 12.5364Z"
+            />
+          </svg>
+        </div>
+        <div
+          class="blog-article__arrow blog-article__arrow--next"
+          aria-label="Next article"
+        >
+          <svg
+            width="16"
+            height="13"
+            viewBox="0 0 16 13"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.26365 0.463616C8.61513 0.112144 9.18497 0.112144 9.53645 0.463616L14.9364 5.86362C15.2879 6.21509 15.2879 6.78494 14.9364 7.13641L9.53645 12.5364C9.18497 12.8879 8.61513 12.8879 8.26365 12.5364C7.91218 12.1849 7.91218 11.6151 8.26365 11.2636L12.1273 7.40001L1.70005 7.40001C1.20299 7.40001 0.800049 6.99707 0.800049 6.50001C0.800049 6.00296 1.20299 5.60001 1.70005 5.60001H12.1273L8.26365 1.73641C7.91218 1.38494 7.91218 0.815088 8.26365 0.463616Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-article__slider-wrapper">
+      <div class="swiper blog-article__swiper js-blog-article-swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide blog-article__card">
+            <img
+              class="blog-article__img"
+              src="./assets/image/blog-article-img1.jpg"
+              alt="List of UX Designer Portfolio"
+              width="407"
+              height="650"
+            />
+            <h3 class="blog-article__card-title heading-h5">
+              List of UX Designer Portfolio / Case Studies where you can make
+              money
+            </h3>
+            <p class="blog-article__card-text text-p-medium">
+              Here are some portfolios / Case Studies from UX Designers that you
+              can use as a reference for creating a portfolio.
+            </p>
+            <a href="detailblog.html" class="btn blog-article__card-button"
+              >Read More</a
+            >
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide blog-article__card">
+            <img
+              class="blog-article__img"
+              src="./assets/image/blog-article-img2.jpg"
+              alt="Skyrocketing in The Designing Career"
+              width="384"
+              height="288"
+            />
+            <h3 class="blog-article__card-title heading-h5">
+              Skyrocketing in The Designing Career, Why Not?
+            </h3>
+            <p class="blog-article__card-text text-p-medium">
+              Ever thought of jumping into the world of design as a career? If
+              not, you may want to look at what the word ‘design’ actually
+              means.
+            </p>
+            <a href="detailblog.html" class="btn blog-article__card-button"
+              >Read More</a
+            >
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide blog-article__card">
+            <img
+              class="blog-article__img"
+              src="./assets/image/blog-article-img3.jpg"
+              alt="Elements that may be missed"
+              width="384"
+              height="288"
+            />
+            <h3 class="blog-article__card-title heading-h5">
+              Elements that may be missed when designing the UI
+            </h3>
+            <p class="blog-article__card-text text-p-medium">
+              This is an article that talks about the little elements that are
+              often overlooked when designing UI.
+            </p>
+            <a href="detailblog.html" class="btn blog-article__card-button"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .blog-article__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: clamp(32px, 5vw, 64px);
+  }
+
+  .blog-article__header {
+    flex: 1 1 60%;
+    min-width: 280px;
+  }
+
+  .blog-article__pagination {
+    display: flex;
+    gap: 12px;
+  }
+</style>

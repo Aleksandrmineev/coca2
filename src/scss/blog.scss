@@ -1,0 +1,11 @@
+@import './mixins';
+@import './base';
+@import './globals';
+
+// components
+@import './components/header';
+@import './components/blog/hero';
+@import './components/blog/blog-slider';
+@import './components/blog/blog-grid';
+@import './components/blog/blog-article';
+@import './components/footer';

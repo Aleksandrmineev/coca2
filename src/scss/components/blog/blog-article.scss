@@ -1,0 +1,123 @@
+.blog-article {
+  &__container {
+    padding: clamp(80px, 10vw, 160px) var(--container-padding);
+  }
+
+  &__swiper {
+    position: relative;
+    overflow: visible;
+    margin-right: calc(var(--container-padding, 0px) * -1);
+    margin-left: 0;
+    inline-size: calc(100% + (100vw - 100%) / 2);
+
+    @include small-tablet {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: clamp(32px, 5vw, 64px);
+  }
+
+  &__header {
+    flex: 1 1 60%;
+    min-width: 280px;
+  }
+
+  &__description {
+    max-width: 435px;
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+  }
+
+  &__pagination {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+
+    // @media (max-width: 768px) {
+    //   display: none;
+    // }
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--neutral-color-40);
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    color: var(--neutral-color-50); // стрелка по умолчанию (серая)
+    background-color: var(--neutral-color-10);
+    transition: all var(--transition);
+
+    &:hover {
+      border-color: var(--neutral-color-100);
+      color: var(--neutral-color-10); // белая стрелка
+      background-color: var(--neutral-color-100); // тёмный фон
+    }
+
+    svg {
+      transition: fill var(--transition);
+    }
+  }
+
+  &__img {
+    padding-bottom: 24px;
+  }
+
+  &__card {
+    &-title {
+      padding-bottom: 16px;
+      max-width: 407px;
+      font-weight: 600;
+      line-height: 131%;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+
+    &-text {
+      padding-bottom: 24px;
+      max-width: 407px;
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--neutral-color-40);
+  border-radius: 100px;
+  padding: 16px 35px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  text-decoration: none;
+  color: var(--neutral-color-100);
+  background-color: transparent;
+  transition: opacity var(--transition);
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &--popular {
+    color: #1d1e25;
+    background-color: #fff;
+  }
+
+  &-wrapper {
+    text-align: center;
+  }
+}

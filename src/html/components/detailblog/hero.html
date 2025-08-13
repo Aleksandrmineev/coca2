@@ -1,0 +1,133 @@
+<section class="blog-article container">
+  <h1 class="hidden">How we perform long-running tasks using AWS services</h1>
+  <h2 class="blog-article__title heading-h1">
+    How we perform long-running tasks using AWS services
+  </h2>
+  <div class="article-meta">
+    <div class="article-meta__left">
+      <img
+        src="./assets/image/author.jpg"
+        alt="Renee Wells"
+        class="article-meta__avatar"
+      />
+      <div class="article-meta__info">
+        <h4 class="article-meta__name">Renee Wells</h4>
+        <p class="article-meta__position">Product Designer, Quotient</p>
+      </div>
+    </div>
+    <div class="article-meta__right">
+      <span class="article-meta__readtime">10 min read</span>
+      <span class="article-meta__date">November 10, 2023</span>
+    </div>
+  </div>
+
+  <div class="article-meta__image">
+    <img src="./assets/image/article-table.jpg" alt="Article image" />
+  </div>
+</section>
+
+<section class="article__content container">
+  <article class="article__content-container">
+    <p class="article__paragraph text-p-medium">
+      Depending on the input, this can result in using a lot of processing power
+      and time. The whole process would take approximately 5 seconds to return a
+      result to the client. Keep in mind were talking about 1 item, a contact
+      from a contact book. After a while, a new requirement is added. Solution
+      must support companies that manage their contacts organized in files. We
+      agreed to develop a web application that would support upload of dataset
+      files, like .csv. The new web application should support third party
+      integrations. Some of them are the ESP/CRM services, like Mailchimp. User
+      does not need to see the result immediately. System can later notify the
+      user about the result, when the process finishes. This information is the
+      key that we need to leverage on when developing our solution. So heres how
+      we did it.
+    </p>
+
+    <h3 class="article__subtitle heading-h2">Initial approach</h3>
+    <p class="article__paragraph text-p-medium">
+      Our initial approach went like this: The web application would read a .csv
+      file line-by-line and submit an array of entries to the backend REST API.
+      Processing is in real time, immediately after the user makes a request for
+      the process to start, he expects a result. Another approach is to apply
+      vertical scaling to AWS architecture. Meaning we used larger, more
+      expensive instances that have more RAM and processing power. This system
+      worked well for smaller datasets, maybe up to 5k entries, but for larger
+      datasets multiple problems arose. This solution is prone to failure due to
+      long request time. Also, because of some 3rd party services that arent
+      optimized for large scale loads or they dont have batch endpoints. 3rd
+      party services also tend to protect their architecture from making a huge
+      bill on their end. The whole process was done in real-time. The request
+      can take a lot of time hanging in there while the backend would do all the
+      work and return the result to the client. The request was limited to 300
+      seconds (at time of writing the article) before AWS would cancel it… Also
+      I need to mention that the user has to wait a few minutes to see the
+      results. They cant use the app during the process, which makes for a bad
+      user experience.
+    </p>
+  </article>
+</section>
+
+<section class="article-author container">
+  <div class="article-author__avatar">
+    <img src="./assets/image/author-renee-wells.jpg" alt="Renee Wells" />
+  </div>
+  <div class="article-author__info">
+    <div class="article-author__share">
+      <ul class="article-author__socials">
+        <li>
+          <a class="article-author__link" href="#" aria-label="Facebook">
+            <img
+              class="article-author__img"
+              src="./assets/icons/socials/team-svg-fb.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="article-author__link" href="#" aria-label="Twitter / X">
+            <img
+              class="article-author__img"
+              src="./assets/icons/socials/team-svg-twit.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="article-author__link" href="#" aria-label="LinkedIn">
+            <img
+              class="article-author__img"
+              src="./assets/icons/socials/team-svg-lin.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="article-author__link" href="#" aria-label="Instagram">
+            <img
+              class="article-author__img"
+              src="./assets/icons/socials/team-svg-in.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+        </li>
+      </ul>
+      <span>Share this article</span>
+    </div>
+    <div class="article-author__written">Written by</div>
+    <h3 class="article-author__name heading-h5">Renee Wells</h3>
+    <div class="article-author__position">Product Designer, Quotient</div>
+    <p class="article-author__bio text-p-medium">
+      Skilled in React Native, iOS and backend, Toni has a demonstrated
+      knowledge of the information technology and services industry, with plenty
+      of hands-on experience to back it up.
+    </p>
+  </div>
+</section>

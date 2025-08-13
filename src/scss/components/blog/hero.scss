@@ -1,0 +1,36 @@
+.blog-hero {
+  padding: clamp(48px, 8vw, 120px) 0;
+
+  &__container {
+    display: grid;
+    gap: clamp(24px, 4vw, 48px);
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    max-width: 959px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    max-width: 738px;
+
+    &::before {
+      width: 176px;
+      transform: translateY(-40px);
+
+      @include mini-desktop {
+        display: none;
+      }
+    }
+  }
+}

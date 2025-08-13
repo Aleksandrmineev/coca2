@@ -1,0 +1,216 @@
+<section class="blog-slider">
+  <nav class="blog-categories" aria-label="Blog categories">
+    <div class="container">
+      <ul class="blog-categories__list" role="list">
+        <li>
+          <button
+            class="blog-categories__item is-active"
+            type="button"
+            data-category="all"
+          >
+            View all
+          </button>
+        </li>
+        <li>
+          <button
+            class="blog-categories__item"
+            type="button"
+            data-category="design"
+          >
+            Design
+          </button>
+        </li>
+        <li>
+          <button
+            class="blog-categories__item"
+            type="button"
+            data-category="articles"
+          >
+            Articles
+          </button>
+        </li>
+        <li>
+          <button
+            class="blog-categories__item"
+            type="button"
+            data-category="product"
+          >
+            Product
+          </button>
+        </li>
+        <li>
+          <button
+            class="blog-categories__item"
+            type="button"
+            data-category="software-dev"
+          >
+            Software Development
+          </button>
+        </li>
+        <li>
+          <button
+            class="blog-categories__item"
+            type="button"
+            data-category="customer-success"
+          >
+            Customer Success
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container blog-slider__container">
+    <div class="swiper blog-slider__swiper js-blog-slider">
+      <div class="swiper-wrapper">
+        <!-- slide 1 -->
+        <div class="swiper-slide blog__card" data-category="design">
+          <img
+            class="blog__card-img"
+            src="./assets/image/blog-slider-img-1.jpg"
+            width="515"
+            height="428"
+            alt="Practice making User Flow"
+          />
+
+          <div class="blog__card-meta text-p-small">
+            Published in <span class="blog__card-category">Insight</span> Jan
+            30, 2021
+          </div>
+
+          <h3 class="blog__card-title heading-h5">
+            <a href="detailblog.html">Practice making User Flow</a>
+          </h3>
+
+          <p class="blog__card-text text-p-medium">
+            In this article, we'll cover how to create user flows.
+          </p>
+        </div>
+
+        <!-- декоративный элемент (лучше вынести ВНЕ .swiper-wrapper) -->
+        <div class="blog__divider" aria-hidden="true">
+          <span class="blog__divider-icon">‹›</span>
+        </div>
+
+        <!-- slide 2 -->
+        <div class="swiper-slide blog__card" data-category="articles">
+          <img
+            class="blog__card-img"
+            src="./assets/image/blog-slider-img-2.jpg"
+            width="515"
+            height="428"
+            alt=""
+          />
+          <div class="blog__card-meta text-p-small">
+            Published in <span class="blog__card-category">Insight</span> Jan
+            30, 2021
+          </div>
+
+          <h3 class="blog__card-title heading-h5">
+            <a href="detailblog.html">Overview of the Design Principles</a>
+          </h3>
+
+          <p class="blog__card-text text-p-medium">
+            What are Design Principles?… To understand design principles, we
+            first discuss the principles.
+          </p>
+        </div>
+
+        <!-- slide 3 -->
+        <div class="swiper-slide blog__card" data-category="product">
+          <img
+            class="blog__card-img"
+            src="./assets/image/blog-slider-img-3.jpg"
+            width="515"
+            height="428"
+            alt=""
+          />
+          <div class="blog__card-meta text-p-small">
+            Published in <span class="blog__card-category">Insight</span> Jan
+            30, 2021
+          </div>
+
+          <h3 class="blog__card-title heading-h5">
+            <a href="detailblog.html">Using Grid in website design</a>
+          </h3>
+
+          <p class="blog__card-text text-p-medium">
+            Andi: "What's the grid like?" Toni: “Like below…”
+          </p>
+        </div>
+
+        <!-- повтор (для проверки фильтра) -->
+        <!-- slide 1 -->
+        <div class="swiper-slide blog__card" data-category="software-dev">
+          <img
+            class="blog__card-img"
+            src="./assets/image/blog-slider-img-1.jpg"
+            width="515"
+            height="428"
+            alt="Practice making User Flow"
+          />
+
+          <div class="blog__card-meta text-p-small">
+            Published in <span class="blog__card-category">Insight</span> Jan
+            30, 2021
+          </div>
+
+          <h3 class="blog__card-title heading-h5">
+            <a href="detailblog.html">Practice making User Flow</a>
+          </h3>
+
+          <p class="blog__card-text text-p-medium">
+            In this article, we'll cover how to create user flows.
+          </p>
+        </div>
+
+        <!-- slide 2 -->
+        <div class="swiper-slide blog__card" data-category="customer-success">
+          <img
+            class="blog__card-img"
+            src="./assets/image/blog-slider-img-2.jpg"
+            width="515"
+            height="428"
+            alt=""
+          />
+          <div class="blog__card-meta text-p-small">
+            Published in <span class="blog__card-category">Insight</span> Jan
+            30, 2021
+          </div>
+
+          <h3 class="blog__card-title heading-h5">
+            <a href="detailblog.html">Overview of the Design Principles</a>
+          </h3>
+
+          <p class="blog__card-text text-p-medium">
+            What are Design Principles?… To understand design principles, we
+            first discuss the principles.
+          </p>
+        </div>
+
+        <!-- slide 3 -->
+        <div class="swiper-slide blog__card" data-category="product">
+          <img
+            class="blog__card-img"
+            src="./assets/image/blog-slider-img-3.jpg"
+            width="515"
+            height="428"
+            alt=""
+          />
+          <div class="blog__card-meta text-p-small">
+            Published in <span class="blog__card-category">Insight</span> Jan
+            30, 2021
+          </div>
+
+          <h3 class="blog__card-title heading-h5">
+            <a href="detailblog.html">Using Grid in website design</a>
+          </h3>
+
+          <p class="blog__card-text text-p-medium">
+            Andi: "What's the grid like?" Toni: “Like below…”
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

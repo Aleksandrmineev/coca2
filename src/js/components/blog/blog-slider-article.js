@@ -10,7 +10,7 @@ export function initBlogArticleSlider(root = document) {
 
   new Swiper(el, {
     modules: [Navigation],
-    slidesPerView: 4,
+    slidesPerView: 2.5,
     spaceBetween: 32,
     speed: 600,
     loop: true,

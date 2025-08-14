@@ -23,12 +23,11 @@ export function initBlogSlider(root = document) {
   };
 
   const options = {
-    slidesPerView: 2.5,
+    slidesPerView: 3,
     spaceBetween: 24,
     speed: 500,
     loop: true,
     breakpoints: {
-      1400: { slidesPerView: 3, spaceBetween: 32 },
       1200: { slidesPerView: 3, spaceBetween: 32 },
       992: { slidesPerView: 2.5, spaceBetween: 24 },
       768: { slidesPerView: 2, spaceBetween: 20 },

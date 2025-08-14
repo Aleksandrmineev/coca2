@@ -23,7 +23,7 @@ export function initBlogSlider(root = document) {
   };
 
   const options = {
-    slidesPerView: 3,
+    slidesPerView: 2.5,
     spaceBetween: 24,
     speed: 500,
     loop: true,

@@ -28,9 +28,11 @@ export function initBlogSlider(root = document) {
     speed: 500,
     loop: true,
     breakpoints: {
-      1440: { slidesPerView: 2.5, spaceBetween: 24 },
+      1400: { slidesPerView: 3, spaceBetween: 32 },
+      1200: { slidesPerView: 3, spaceBetween: 32 },
       992: { slidesPerView: 2.5, spaceBetween: 24 },
       768: { slidesPerView: 2, spaceBetween: 20 },
+      560: { slidesPerView: 1.5, spaceBetween: 20 },
       0: { slidesPerView: 1, spaceBetween: 16 },
     },
   };
